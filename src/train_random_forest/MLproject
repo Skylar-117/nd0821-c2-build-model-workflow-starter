@@ -1,4 +1,4 @@
-name: download_file
+name: train_random_forest
 conda_env: conda.yml
 
 entry_points:
@@ -6,7 +6,7 @@ entry_points:
     parameters:
 
       trainval_artifact:
-        description: Train dataset
+        description: Training dataset
         type: string
 
       val_size:

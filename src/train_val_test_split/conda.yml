@@ -1,4 +1,4 @@
-name: download_file
+name: data_split
 channels:
   - conda-forge
   - defaults
