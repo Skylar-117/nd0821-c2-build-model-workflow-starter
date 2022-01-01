@@ -36,6 +36,10 @@ def clean_data(args):
     logger.info("Converted last_review datatype to datetime")
     logger.info("Finish EDA ...")
 
+    idx = dataframe['longitude'].between(-74.25, -73.50) \
+        & dataframe['latitude'].between(40.5, 41.2)
+    dataframe = dataframe[idx].copy()
+
     df.to_csv(args.output_artifact, index=False)
     logger.info(f"Save cleaned dataset to {args.output_artifact}")
 
